@@ -18,12 +18,22 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.focusapp.FocusAppTheme
 import com.example.focusapp.domain.entity.FocusMode
 import com.example.focusapp.domain.entity.TimerState
+import com.example.focusapp.presentation.component.ModeSelector
 import com.example.focusapp.presentation.component.TimerControls
 import com.example.focusapp.presentation.component.TimerDisplay
+
+/**
+ * Screen Layout and Content
+ *
+ * This file contains the main screen layout for the FocusApp.
+ * Merged from legacy ui/FocusAppUI.kt for unified structure.
+ */
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,6 +96,26 @@ fun FocusAppScreenContent(
                 onReset = onReset
             )
         }
+    }
+}
+
+@Preview(showBackground = true, showSystemUi = true)
+@Composable
+fun FocusAppScreenContentPreview() {
+    FocusAppTheme {
+        FocusAppScreenContent(
+            snackbarHostState = SnackbarHostState(),
+            uiState = TimerState(
+                remainingTimeSeconds = 1500,
+                totalTimeSeconds = 1500,
+                timerStatus = com.example.focusapp.domain.entity.TimerStatus.IDLE,
+                currentMode = FocusMode.FOCUS
+            ),
+            onModeSelected = {},
+            onStart = {},
+            onPause = {},
+            onReset = {}
+        )
     }
 }
 

@@ -1,4 +1,4 @@
-package com.example.focusapp.presentation.screen
+package com.example.focusapp.presentation.component
 
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
