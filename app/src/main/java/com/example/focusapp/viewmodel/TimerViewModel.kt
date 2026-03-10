@@ -1,4 +1,4 @@
-package com.example.focusapp
+package com.example.focusapp.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope

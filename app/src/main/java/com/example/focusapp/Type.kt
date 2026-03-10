@@ -1,4 +1,4 @@
-package com.example.focusapp.ui.theme
+package com.example.focusapp
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

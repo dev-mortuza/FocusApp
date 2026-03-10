@@ -1,4 +1,4 @@
-package com.example.focusapp.ui.theme
+package com.example.focusapp
 
 import android.app.Activity
 import android.os.Build
