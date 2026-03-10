@@ -45,6 +45,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -167,7 +168,13 @@ fun ModeSelector(
                         },
                         style = MaterialTheme.typography.labelLarge
                     )
-                }
+                },
+                colors = SegmentedButtonDefaults.colors(
+                    activeContainerColor = MaterialTheme.colorScheme.primary,
+                    activeContentColor = MaterialTheme.colorScheme.onPrimary,
+                    inactiveContainerColor = MaterialTheme.colorScheme.surfaceVariant,
+                    inactiveContentColor = MaterialTheme.colorScheme.onSurfaceVariant
+                )
             )
         }
     }
@@ -249,7 +256,7 @@ fun TimerControls(
             onClick = {
                 if (status == TimerStatus.RUNNING) onPause() else onStart()
             },
-            containerColor = MaterialTheme.colorScheme.primary,
+            containerColor = if( status == TimerStatus.RUNNING ) Color.Red else MaterialTheme.colorScheme.primary,
             contentColor = MaterialTheme.colorScheme.onPrimary,
             shape = MaterialTheme.shapes.extraLarge,
             modifier = Modifier.size(80.dp)
