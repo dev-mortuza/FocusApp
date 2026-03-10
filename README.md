@@ -18,13 +18,6 @@ cd FocusApp
 npm install
 ```
 
-## Usage
-Start the application:
-
-```bash
-npm start
-```
-
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for discussion.
 
