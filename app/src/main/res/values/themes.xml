@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.FocusApp" parent="Theme.MaterialComponents.Light" />
+</resources>
